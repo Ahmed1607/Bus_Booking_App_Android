@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CreateBus">
+    <EditText
+        android:id="@+id/driverName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:padding="10dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:background="@drawable/edit_text_border"
+        android:hint="Enter your username"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/busModel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <CheckBox
+        android:id="@+id/thirtySeatsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30 seats"
+        android:textColor="@color/black"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/twelveSeatsCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/arrivalTime"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <CheckBox
+        android:id="@+id/fifteenSeatsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15 seats"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/thirtySeatsCheckBox"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/twelveSeatsCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrivalTime"
+        app:layout_constraintVertical_bias="0.97" />
+
+    <CheckBox
+        android:id="@+id/twelveSeatsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 seats"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/thirtySeatsCheckBox"
+        app:layout_constraintEnd_toStartOf="@+id/thirtySeatsCheckBox"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrivalTime"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/busModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Model"
+        android:inputType="text"
+        android:padding="10dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:background="@drawable/edit_text_border"
+        app:layout_constraintBottom_toTopOf="@+id/fromDes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driverName"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/fromDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="From"
+        android:padding="10dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:background="@drawable/edit_text_border"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/toDes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/busModel"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/toDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="To"
+        android:padding="10dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:background="@drawable/edit_text_border"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/takeOffTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fromDes"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/takeOffTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Take Off"
+        android:inputType="text"
+        android:padding="10dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:background="@drawable/edit_text_border"
+        app:layout_constraintBottom_toTopOf="@+id/arrivalTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toDes"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/arrivalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ariival"
+        android:inputType="text"
+        android:padding="10dp"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:background="@drawable/edit_text_border"
+        app:layout_constraintBottom_toTopOf="@+id/thirtySeatsCheckBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/takeOffTime"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/addBusButton"
+        android:layout_width="121dp"
+        android:layout_height="44dp"
+        android:onClick="addBusOnClick"
+        android:text="Add"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fifteenSeatsCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/thirtySeatsCheckBox" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
+
+

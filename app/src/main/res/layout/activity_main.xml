@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="228dp"
+        android:layout_height="167dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.101"
+        app:srcCompat="@drawable/circle" />
+
+    <EditText
+        android:id="@+id/username_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/black"
+        android:ems="10"
+        android:hint="user name "
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.122" />
+
+    <EditText
+        android:id="@+id/passwrod_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_border"
+        android:backgroundTint="@color/black"
+        android:ems="10"
+        android:hint="password "
+        android:inputType="textPassword"
+
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_login"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <CheckBox
+        android:id="@+id/passenger_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="passenger"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.704"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwrod_login"
+        app:layout_constraintVertical_bias="0.139" />
+
+    <CheckBox
+        android:id="@+id/driver_check"
+        android:layout_width="87dp"
+        android:layout_height="49dp"
+        android:text="driver"
+        android:textColor="@color/black"
+        android:textColorLink="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwrod_login"
+        app:layout_constraintVertical_bias="0.136" />
+
+
+    <Button
+        android:id="@+id/sginin"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:onClick="sginin_onclick"
+        android:text="sign in"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passenger_check"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <LinearLayout
+    app:layout_constraintTop_toBottomOf="@+id/sginin"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="20dp"
+    android:layout_height="wrap_content">
+
+
+ 
+
+    <TextView
+        android:id="@+id/Dont_have_acc"
+        android:layout_width="234dp"
+        android:layout_height="50dp"
+        android:text="Dont have an account ?"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.923" />
+
+    <TextView
+        android:id="@+id/sginup"
+        android:layout_width="86dp"
+        android:layout_height="53dp"
+        android:onClick="sginup_onclick"
+        android:text="sign up"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.882"
+        tools:ignore="MissingConstraints" />
+
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
